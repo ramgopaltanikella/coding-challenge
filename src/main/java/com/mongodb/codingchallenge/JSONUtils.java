@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Map;
+import java.util.Scanner;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -66,10 +67,19 @@ public class JSONUtils {
 	 * String representing flattened version of the JSON object is output to stdout
 	 */
 	public static void main(String[] args) {
-		try (final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-			final String json = reader.readLine();
-			if (json != null) {
-				System.out.println(flatten(json));
+		try (final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); final Scanner scanner = new Scanner(reader)) {
+			final StringBuilder json = new StringBuilder();
+			// TODO: Basic multi-line now works, but if input has blank line it does not work
+			while (scanner.hasNextLine()) {
+				final String line = scanner.nextLine();
+				if (line == null || line.isEmpty()) {
+					break;
+				}
+				json.append(line);
+			}
+
+			if (!json.isEmpty()) {
+				System.out.println(flatten(json.toString()));
 			}
 		} catch (final IOException ioe) {
 			System.err.println(ioe.getMessage());
