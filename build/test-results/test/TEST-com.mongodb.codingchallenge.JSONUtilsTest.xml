@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.mongodb.codingchallenge.JSONUtilsTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-05-15T21:59:39" hostname="RamgopaellasMBP" time="0.161">
+<testsuite name="com.mongodb.codingchallenge.JSONUtilsTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-05-23T05:41:47" hostname="RamgopaellasMBP" time="0.132">
   <properties/>
-  <testcase name="testInvalidJSON()" classname="com.mongodb.codingchallenge.JSONUtilsTest" time="0.075"/>
-  <testcase name="#1 - Test Valid JSON" classname="com.mongodb.codingchallenge.JSONUtilsTest" time="0.033"/>
+  <testcase name="testInvalidJSON()" classname="com.mongodb.codingchallenge.JSONUtilsTest" time="0.055"/>
+  <testcase name="#1 - Test Valid JSON" classname="com.mongodb.codingchallenge.JSONUtilsTest" time="0.028"/>
   <testcase name="#2 - Test Valid JSON" classname="com.mongodb.codingchallenge.JSONUtilsTest" time="0.002"/>
-  <testcase name="#3 - Test Valid JSON" classname="com.mongodb.codingchallenge.JSONUtilsTest" time="0.001"/>
-  <testcase name="#4 - Test Valid JSON" classname="com.mongodb.codingchallenge.JSONUtilsTest" time="0.002"/>
-  <testcase name="#5 - Test Valid JSON" classname="com.mongodb.codingchallenge.JSONUtilsTest" time="0.001"/>
-  <testcase name="#6 - Test Valid JSON" classname="com.mongodb.codingchallenge.JSONUtilsTest" time="0.002"/>
-  <testcase name="#7 - Test Valid JSON" classname="com.mongodb.codingchallenge.JSONUtilsTest" time="0.002"/>
+  <testcase name="#3 - Test Valid JSON" classname="com.mongodb.codingchallenge.JSONUtilsTest" time="0.002"/>
+  <testcase name="#4 - Test Valid JSON" classname="com.mongodb.codingchallenge.JSONUtilsTest" time="0.001"/>
+  <testcase name="#5 - Test Valid JSON" classname="com.mongodb.codingchallenge.JSONUtilsTest" time="0.002"/>
+  <testcase name="#6 - Test Valid JSON" classname="com.mongodb.codingchallenge.JSONUtilsTest" time="0.001"/>
+  <testcase name="#7 - Test Valid JSON" classname="com.mongodb.codingchallenge.JSONUtilsTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
