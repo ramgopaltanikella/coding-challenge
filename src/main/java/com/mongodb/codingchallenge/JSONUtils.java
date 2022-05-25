@@ -78,9 +78,7 @@ public class JSONUtils {
 				json.append(line);
 			}
 
-			if (!json.isEmpty()) {
-				System.out.println(flatten(json.toString()));
-			}
+			System.out.println(flatten(json.toString()));
 		} catch (final IOException ioe) {
 			System.err.println(ioe.getMessage());
 		} catch (final RuntimeException rte) {

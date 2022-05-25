@@ -36,15 +36,28 @@ The input is expected via stdin, so after typing the above command, hit Return. 
 ##### Valid runs
 
 `java -jar ./build/libs/mongodb-coding-challenge-shadow.jar`  
-{"a": 1, "b": true, "c": {"d": 3,"e": "test"}}  
+{  
+"a": 1,  
+"b": true,  
+"c": {  
+"d": 3,  
+"e": "test"  
+}  
+}  
+
 {"a":1,"b":true,"c.d":3,"c.e":"test"}  
 
 test.json contains same input as above.  
 `cat ./src/test/resources/test.json | java -jar ./build/libs/mongodb-coding-challenge-shadow.jar`  
 {"a":1,"b":true,"c.d":3,"c.e":"test"}  
 
-##### Invalid run
+##### Invalid runs
+
 Note the missing brace at the end of the input  
 `java -jar ./build/libs/mongodb-coding-challenge-shadow.jar`  
 {"a": 3  
+Input is not a valid JSON object
+
+empty.json is empty.  
+`cat ./src/test/resources/empty.json | java -jar ./build/libs/mongodb-coding-challenge-shadow.jar`  
 Input is not a valid JSON object

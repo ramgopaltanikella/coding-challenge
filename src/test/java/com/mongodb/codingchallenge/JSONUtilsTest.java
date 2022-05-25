@@ -38,6 +38,24 @@ public class JSONUtilsTest {
 
 		assertTrue(thrown.getMessage().contains("EOFException"));
 	}
+	
+	@Test
+	public void testEmptyJSON() {
+		RuntimeException thrown = Assertions.assertThrows(RuntimeException.class, () -> {
+			JsonParser.parseString(JSONUtils.flatten("")).getAsJsonObject();
+		}, "RuntimeException was expected");
+
+		assertTrue(thrown.getMessage().contains("Not a JSON Object"));
+	}
+	
+	@Test
+	public void testNullJSON() {
+		RuntimeException thrown = Assertions.assertThrows(RuntimeException.class, () -> {
+			JsonParser.parseString(JSONUtils.flatten(null)).getAsJsonObject();
+		}, "RuntimeException was expected");
+
+		assertTrue(thrown instanceof NullPointerException);
+	}
 
 	private static Stream<Arguments> validJsonAndExpectedFlatJsonProvider() {
 		final String VALID_JSON_1 = "{\"a\": 1, \"b\": true, \"c\": {\"d\": 3,\"e\": \"test\"}}";
